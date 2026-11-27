@@ -13,17 +13,18 @@ function[v,d,f] = input_parameters()
     
     %  DERIVED GEOMETRY AND AIRFOIL QUANTITIES
     % ------------------------------------------------------------------------
+    d.airfoil     = 'None';          % Airfoil dat file name (for EMWET)
     d.b           = 47.57;           % Full span 2s [m]
     d.c_k         = 6.7778;          % Kink chord [m]
     d.c_t         = 2.2557;          % Tip chord [m]
-    d.c_y         = 1;               % Local chord c(y) [m]
-    d.c_e         = 1;               % Chord at tank endpoint [m]
+    d.c_y         = NaN;             % Local chord c(y) [m]
+    d.c_e         = NaN;             % Chord at tank endpoint [m]
     d.k_thick     = 0.7434;          % Initial thickness-scaling factor [-]
     d.S           = 283.3;           % Full planform area [m^2]
     d.MAC         = 6.9216;          % Model mean aerodynamic chord [m]
     d.y_e         = 20.21725;        % Tank endpoint 0.85s [m]
     d.I_tank      = 0.04258139;      % Normalized tank-section integral [-]
-    d.A_tank      = 1;               % Local geometric tank cross-sectional area [m^2]
+    d.A_tank      = NaN;             % Local geometric tank cross-sectional area [m^2]
     d.V_tank      = 81.1493;         % Combined geometric tank volume [m^3]
     d.V_usable    = 75.4688;         % Usable volume f_tank*V_tank [m^3]
     
